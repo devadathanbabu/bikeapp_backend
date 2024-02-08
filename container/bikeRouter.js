@@ -15,5 +15,10 @@ router.get("/viewbike",async(req,res)=>{
     res.json(data)
 
 })
+router.post("/searchbike",async(req,res)=>{
+    let input=req.body
+    let data=await bikeModel.find(input)
+    res.json(data)
 
+})
 module.exports=router
