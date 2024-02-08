@@ -10,6 +10,10 @@ router.post("/addbike",async(req,res)=>{
         status:"success"
     })
 })
+router.get("/viewbike",async(req,res)=>{
+    let data=await bikeModel.find()
+    res.json(data)
 
+})
 
 module.exports=router
